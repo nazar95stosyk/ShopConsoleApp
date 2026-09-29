@@ -1,0 +1,199 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Samsung RB34T600CB1",
+      "price": 24999,
+      "stockQuantity": 7,
+      "description": "Двокамерний холодильник Samsung з No Frost",
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "name": "LG GBV7280BPY",
+      "price": 31999,
+      "stockQuantity": 3,
+      "description": "Холодильник LG з інверторним компресором",
+      "categoryId": 1
+    },
+    {
+      "id": 3,
+      "name": "Bosch Serie 4 SMS4EMI06E",
+      "price": 27999,
+      "stockQuantity": 5,
+      "description": "Посудомийна машина Bosch на 13 комплектів",
+      "categoryId": 2
+    },
+    {
+      "id": 4,
+      "name": "Electrolux EES48200L",
+      "price": 23499,
+      "stockQuantity": 2,
+      "description": "Вбудована посудомийна машина Electrolux",
+      "categoryId": 2
+    },
+    {
+      "id": 5,
+      "name": "Samsung WW80T554DAW",
+      "price": 18999,
+      "stockQuantity": 8,
+      "description": "Пральна машина Samsung 8 кг",
+      "categoryId": 3
+    },
+    {
+      "id": 6,
+      "name": "Bosch WAN24260UA",
+      "price": 16499,
+      "stockQuantity": 4,
+      "description": "Пральна машина Bosch 7 кг",
+      "categoryId": 3
+    },
+    {
+      "id": 7,
+      "name": "Philips Airfryer HD9252",
+      "price": 4999,
+      "stockQuantity": 15,
+      "description": "Аерофритюрниця Philips 4.1 л",
+      "categoryId": 4
+    },
+    {
+      "id": 8,
+      "name": "Tefal Easy Fry Max",
+      "price": 4299,
+      "stockQuantity": 0,
+      "description": "Аерофритюрниця Tefal 5 л",
+      "categoryId": 4
+    },
+    {
+      "id": 9,
+      "name": "Dyson V12 Detect Slim",
+      "price": 24999,
+      "stockQuantity": 1,
+      "description": "Бездротовий вертикальний пилосос Dyson",
+      "categoryId": 5
+    },
+    {
+      "id": 10,
+      "name": "Samsung Jet 75",
+      "price": 13999,
+      "stockQuantity": 6,
+      "description": "Бездротовий пилосос Samsung",
+      "categoryId": 5
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "firstName": "Nazar",
+      "lastName": "Stosyk",
+      "email": "nazar@example.com",
+      "phone": "0935053404"
+    },
+    {
+      "id": 2,
+      "firstName": "Oleksandr",
+      "lastName": "Koval",
+      "email": "oleksandr@example.com",
+      "phone": "0671234567"
+    },
+    {
+      "id": 3,
+      "firstName": "Anna",
+      "lastName": "Melnyk",
+      "email": "anna@example.com",
+      "phone": "0509876543"
+    },
+    {
+      "id": 4,
+      "firstName": "Dmytro",
+      "lastName": "Bondar",
+      "email": "dmytro@example.com",
+      "phone": "0634567890"
+    },
+    {
+      "id": 5,
+      "firstName": "Olena",
+      "lastName": "Shevchenko",
+      "email": "olena@example.com",
+      "phone": "0981112233"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Холодильники",
+      "description": "Холодильники та морозильні камери"
+    },
+    {
+      "id": 2,
+      "name": "Посудомийні машини",
+      "description": "Вбудовані та окремостоячі посудомийні машини"
+    },
+    {
+      "id": 3,
+      "name": "Пральні машини",
+      "description": "Пральні та сушильні машини"
+    },
+    {
+      "id": 4,
+      "name": "Кухонна техніка",
+      "description": "Мультиварки, аерофритюрниці та інша техніка для кухні"
+    },
+    {
+      "id": 5,
+      "name": "Пилососи",
+      "description": "Вертикальні, роботизовані та звичайні пилососи"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "createdAt": "2026-09-10T14:30:00",
+      "status": "Completed",
+      "totalAmount": 24999
+    },
+    {
+      "id": 2,
+      "customerId": 2,
+      "createdAt": "2026-09-12T11:15:00",
+      "status": "Completed",
+      "totalAmount": 4999
+    },
+    {
+      "id": 3,
+      "customerId": 3,
+      "createdAt": "2026-09-15T16:45:00",
+      "status": "Processing",
+      "totalAmount": 31999
+    },
+    {
+      "id": 4,
+      "customerId": 1,
+      "createdAt": "2026-09-18T09:20:00",
+      "status": "Completed",
+      "totalAmount": 18999
+    },
+    {
+      "id": 5,
+      "customerId": 4,
+      "createdAt": "2026-09-20T13:10:00",
+      "status": "Cancelled",
+      "totalAmount": 23499
+    },
+    {
+      "id": 6,
+      "customerId": 5,
+      "createdAt": "2026-09-23T18:30:00",
+      "status": "Processing",
+      "totalAmount": 13999
+    },
+    {
+      "id": 7,
+      "customerId": 2,
+      "createdAt": "2026-09-27T12:00:00",
+      "status": "Completed",
+      "totalAmount": 27999
+    }
+  ]
+}
