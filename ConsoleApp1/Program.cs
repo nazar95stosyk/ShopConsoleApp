@@ -4,12 +4,10 @@
 using System.Text.Json;
 using ConsoleApp1.DataContainers;
 using ConsoleApp1.Models;
-using System.Text.Json;
+using ConsoleApp1.Services;
 
-string filePath = "/Users/medina228/RiderProjects/ConsoleApp1/ConsoleApp1/DataSource/Data.json";
-
-string json = File.ReadAllText(filePath);
-
+var reader = new DataReader();
+var json = reader.Read(filePath: "/Users/medina228/RiderProjects/ConsoleApp1/ConsoleApp1/DataSource/Data.json");
 
 var options = new JsonSerializerOptions
 {
