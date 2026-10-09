@@ -1,20 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-//asfsfs
-
-using System.Text.Json;
-using ConsoleApp1.DataContainers;
-using ConsoleApp1.Models;
+﻿using ConsoleApp1.DataContainers;
 using ConsoleApp1.Services;
 
 var reader = new DataReader();
 var json = reader.Read(filePath: "/Users/medina228/RiderProjects/ConsoleApp1/ConsoleApp1/DataSource/Data.json");
 
-var options = new JsonSerializerOptions
-{
-    PropertyNameCaseInsensitive = true
-};
-
-var shopData = JsonSerializer.Deserialize<ShopData>(json, options);
+var parser = new JsonParser();
+var shopData = parser.Parse<ShopData>(json);
 
 var products = shopData!.Products;
 var customers = shopData.Customers;
