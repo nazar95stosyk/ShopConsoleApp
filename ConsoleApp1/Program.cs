@@ -2,20 +2,46 @@
 using ConsoleApp1.Services;
 
 var reader = new DataReader();
-var json = reader.Read(filePath: "/Users/medina228/RiderProjects/ConsoleApp1/ConsoleApp1/DataSource/Data.json");
-
 var parser = new JsonParser();
-var shopData = parser.Parse<ShopData>(json);
 
-var products = shopData!.Products;
-var customers = shopData.Customers;
-var categories = shopData.Categories;
-var orders = shopData.Orders;
+var productService = new ProductService();
+var customerService = new CustomerService();
+var orderService = new OrderService();
+var categoryService = new CategoryService();
+var orderItemService = new OrderItemService();
+
+orderItemService.Load(
+    "/Users/medina228/RiderProjects/ConsoleApp1/ConsoleApp1/DataSource/OrderItems.json",
+    reader,
+    parser);
+productService.Load(
+    "/Users/medina228/RiderProjects/ConsoleApp1/ConsoleApp1/DataSource/Products.json",
+    reader,
+    parser);
+customerService.Load(
+    "/Users/medina228/RiderProjects/ConsoleApp1/ConsoleApp1/DataSource/Customers.json",
+    reader,
+    parser);
+orderService.Load(
+    "/Users/medina228/RiderProjects/ConsoleApp1/ConsoleApp1/DataSource/Orders.json",
+    reader,
+    parser);
+categoryService.Load(
+    "/Users/medina228/RiderProjects/ConsoleApp1/ConsoleApp1/DataSource/Categories.json",
+    reader,
+    parser);
+
+var products = productService.GetAll();
+var customers = customerService.GetAll();
+var categories = categoryService.GetAll();
+var orders = orderService.GetAll();
+var orderItems = orderItemService.GetAll();
 
 Console.WriteLine($"Products: {products.Count}");
 Console.WriteLine($"Customers: {customers.Count}");
 Console.WriteLine($"Categories: {categories.Count}");
 Console.WriteLine($"Orders: {orders.Count}");
+Console.WriteLine($"Order Items: {orderItems.Count}");
 
 // 1. Всі товари дорожчі за 20 000
 var expensiveProducts = products
@@ -261,9 +287,6 @@ var refrigeratorsCategory = categories
 var refrigerators = products
     .Where(p => p.CategoryId == refrigeratorsCategory!.Id);
 
-
-
-
 // 17. Те саме через method syntax
 var productsWithCategories2 = products
     .Join(
@@ -276,3 +299,6 @@ var productsWithCategories2 = products
             Price = product.Price,
             CategoryName = category.Name
         });
+
+
+
