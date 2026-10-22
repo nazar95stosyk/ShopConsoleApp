@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "customerId": 1,
+    "createdAt": "2026-09-10T14:30:00",
+    "status": "Completed",
+    "totalAmount": 24999
+  },
+  {
+    "id": 2,
+    "customerId": 2,
+    "createdAt": "2026-09-12T11:15:00",
+    "status": "Completed",
+    "totalAmount": 4999
+  },
+  {
+    "id": 3,
+    "customerId": 3,
+    "createdAt": "2026-09-15T16:45:00",
+    "status": "Processing",
+    "totalAmount": 31999
+  },
+  {
+    "id": 4,
+    "customerId": 1,
+    "createdAt": "2026-09-18T09:20:00",
+    "status": "Completed",
+    "totalAmount": 18999
+  },
+  {
+    "id": 5,
+    "customerId": 4,
+    "createdAt": "2026-09-20T13:10:00",
+    "status": "Cancelled",
+    "totalAmount": 23499
+  },
+  {
+    "id": 6,
+    "customerId": 5,
+    "createdAt": "2026-09-23T18:30:00",
+    "status": "Processing",
+    "totalAmount": 13999
+  },
+  {
+    "id": 7,
+    "customerId": 2,
+    "createdAt": "2026-09-27T12:00:00",
+    "status": "Completed",
+    "totalAmount": 27999
+  }
+]
